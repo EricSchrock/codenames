@@ -8,11 +8,22 @@
 
 static bool balanced(char* string)
 {
-    //todo: Implement this function such that it returns whether a string containing braces is balanced.
-    //todo: A balanced string has a closed brace for every open brace and an open brace for every closed brace.
-    //todo: Furthermore, the open brace in a pair should always come somewhere before the close brace.
-    //todo: See if you can get all the test cases in main to pass.
-    return false;
+    int depth = 0;
+
+    // Walk through the string character by character until the end of the string is reached (C strings end with the null terminator, "\0")
+    for (int i = 0; string[i] != '\0'; i++) {
+        if (string[i] == '{') {
+            depth++;
+        } else if (string[i] == '}') {
+            depth--;
+        }
+
+        if (depth < 0) {
+            return false;
+        }
+    }
+
+    return (depth == 0);
 }
 
 static void test_balanced(char* string, bool expected)

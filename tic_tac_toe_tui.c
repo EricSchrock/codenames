@@ -30,7 +30,7 @@ int main()
 
     // Game loop
     while (true) {
-        update(x_is_next); // Combined the process input and update steps
+        update(x_is_next); // Combined process input and update steps
         render();
 
         if (check_win_conditions(x_is_next)) {
