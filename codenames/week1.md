@@ -67,7 +67,7 @@ Why version control? Version control saves the history of your code changes and 
 
 https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/
 
-    Objective: Setup an authenticated connection between
+    Objective: Setup an authenticated connection between your computer and GitHub
 
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux
 
@@ -84,7 +84,7 @@ Click `File` -> `Open Folder...` or press `Ctrl + K` follow by `Ctrl + O`.
 &nbsp;
 ## Saving your code baseline
 
-    Objective: In your "codenames" repository clone, create a branch called "baseline" and commit your Python Codenames project code
+    Objective: Create a branch called "baseline" and commit your Python Codenames project code
 
 1. From your WSL terminal, in your `codenames` git repository clone, run `git checkout -b baseline`.
 2. Put your Python Codenames project code inside your `codenames` repository.
