@@ -33,17 +33,17 @@ int main()
         update(x_is_next); // Combined process input and update steps
         render();
 
-        if (check_win_conditions(x_is_next)) {
+        if (check_win_conditions(x_is_next)) { //todo: Move into state logic
             printf("%s wins!\n\n", x_is_next ? "X" : "O");
             break;
         }
 
-        if (check_tie_conditions()) {
+        if (check_tie_conditions()) { //todo: Move into state logic
             printf("Nobody wins!\n\n");
             break;
         }
 
-        x_is_next = !x_is_next; // Switch players
+        x_is_next = !x_is_next; // Switch players //todo: Move into state logic
     }
 
     return return_code;
