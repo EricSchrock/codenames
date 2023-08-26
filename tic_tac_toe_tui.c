@@ -1,5 +1,7 @@
-#include <stdio.h>
+#include <ctype.h>
 #include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #define BOARD_SIZE (3)
 
@@ -9,88 +11,60 @@
 #define ANSI_COLOR_GREEN   "\x1b[32m"
 
 typedef enum {
+    STATE_X,
+    STATE_O,
+    STATE_X_WINS,
+    STATE_O_WINS,
+    STATE_TIE,
+} STATE_E;
+
+typedef enum {
     TILE_BLANK,
     TILE_X,
     TILE_O,
 } TILE_E;
 
+static STATE_E state = STATE_X;
 static TILE_E board[BOARD_SIZE][BOARD_SIZE];
 
-static void render(void);
-static void update(bool x_is_next);
-static bool check_win_conditions(bool x_is_next);
+static void process_input(int* col, int* row);
+
+static void update_state(int col, int row);
+static bool check_win_conditions(void);
 static bool check_tie_conditions(void);
+
+static void render(void);
+static void render_board(void);
+static void render_state(void);
 
 int main()
 {
-    int return_code;
-    bool x_is_next = true;
-
     render(); // Initial render so players can see the board on their first play
 
-    // Game loop
-    while (true) {
-        update(x_is_next); // Combined process input and update steps
+    while ((state == STATE_X) || (state == STATE_O)) {
+        int col, row;
+
+        process_input(&col, &row);
+        update_state(col, row);
         render();
-
-        if (check_win_conditions(x_is_next)) { //todo: Move into state logic
-            printf("%s wins!\n\n", x_is_next ? "X" : "O");
-            break;
-        }
-
-        if (check_tie_conditions()) { //todo: Move into state logic
-            printf("Nobody wins!\n\n");
-            break;
-        }
-
-        x_is_next = !x_is_next; // Switch players //todo: Move into state logic
     }
 
-    return return_code;
+    return EXIT_SUCCESS;
 }
 
-static void render(void)
-{
-    printf("\n");
-
-    for (int i = 0; i < BOARD_SIZE; i++) {
-        for (int j = 0; j < BOARD_SIZE; j++) {
-            if (board[i][j] == TILE_BLANK) {
-                printf(" %d ", (j + 1) + (i * BOARD_SIZE));
-            } else if (board[i][j] == TILE_X) {
-                printf(ANSI_COLOR_RED " x " ANSI_COLOR_RESET);
-            } else if (board[i][j] == TILE_O) {
-                printf(ANSI_COLOR_GREEN " o " ANSI_COLOR_RESET);
-            }
-
-            if (j < (BOARD_SIZE - 1)) {
-                printf("|");
-            }
-        }
-
-        printf("\n");
-
-        if (i < (BOARD_SIZE - 1)) {
-            for (int j = 0; j < (BOARD_SIZE * 4) - 1; j ++) {
-                printf("-");
-            }
-
-            printf("\n");
-        }
-    }
-
-    printf("\n");
-}
-
-static void update(bool x_is_next)
+static void process_input(int* col, int* row)
 {
     int slot;
 
     while (true) {
-        // Game loop: Process input
-        printf("%s's turn\n", x_is_next ? "X" : "O");
+        printf("%s's turn\n", state == STATE_X ? "X" : "O");
         printf("Enter slot to place: ");
-        scanf("%d", &slot);
+        int rc = scanf("%d", &slot);
+        if (rc != 1) {
+            printf("Slot must be a number\n");
+            char c = getchar(); // Consume buffer
+            continue;
+        }
 
         if (slot <= 0) {
             printf("Slot must be greater than 0\n");
@@ -100,23 +74,38 @@ static void update(bool x_is_next)
             continue;
         }
 
-        int i = (slot - 1) / BOARD_SIZE;
-        int j = (slot - 1) % BOARD_SIZE;
+        *col = (slot - 1) / BOARD_SIZE;
+        *row = (slot - 1) % BOARD_SIZE;
 
-        if (board[i][j] != TILE_BLANK) {
+        if (board[*col][*row] != TILE_BLANK) {
             printf("Slot must be empty\n");
             continue;
         }
 
-        // Game loop: Update
-        board[i][j] = x_is_next ? TILE_X : TILE_O;
         break;
     }
 }
 
-static bool check_win_conditions(bool x_is_next)
+static void update_state(int col, int row)
 {
-    TILE_E check = x_is_next ? TILE_X : TILE_O;
+    board[col][row] = state == STATE_X ? TILE_X : TILE_O;
+
+    if (check_win_conditions()) {
+        state = (state == STATE_X) ? STATE_X_WINS : STATE_O_WINS;
+        return;
+    }
+
+    if (check_tie_conditions()) {
+        state = STATE_TIE;
+        return;
+    }
+
+    state = state ^ 1; // Toggle between STATE_X and STATE_O with XOR
+}
+
+static bool check_win_conditions(void)
+{
+    TILE_E check = state == STATE_X ? TILE_X : TILE_O;
 
     // Check rows
     bool row;
@@ -177,4 +166,54 @@ static bool check_tie_conditions(void)
     }
 
     return true;
+}
+
+static void render(void)
+{
+    render_board();
+    render_state();
+}
+
+static void render_board(void)
+{
+    printf("\n");
+
+    for (int i = 0; i < BOARD_SIZE; i++) {
+        for (int j = 0; j < BOARD_SIZE; j++) {
+            if (board[i][j] == TILE_BLANK) {
+                printf(" %d ", (j + 1) + (i * BOARD_SIZE));
+            } else if (board[i][j] == TILE_X) {
+                printf(ANSI_COLOR_RED " x " ANSI_COLOR_RESET);
+            } else if (board[i][j] == TILE_O) {
+                printf(ANSI_COLOR_GREEN " o " ANSI_COLOR_RESET);
+            }
+
+            if (j < (BOARD_SIZE - 1)) {
+                printf("|");
+            }
+        }
+
+        printf("\n");
+
+        if (i < (BOARD_SIZE - 1)) {
+            for (int j = 0; j < (BOARD_SIZE * 4) - 1; j ++) {
+                printf("-");
+            }
+
+            printf("\n");
+        }
+    }
+
+    printf("\n");
+}
+
+static void render_state(void)
+{
+    if (state == STATE_X_WINS) {
+        printf("X wins!\n\n");
+    } else if (state == STATE_O_WINS) {
+        printf("O wins!\n\n");
+    } else if (state == STATE_TIE) {
+        printf("Nobody wins!\n\n");
+    }
 }
