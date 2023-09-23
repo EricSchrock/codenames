@@ -1,4 +1,4 @@
-# Week 1 (August 20 - 26, 2023)
+# Step 1
 
 ## Setting up your environment
 
