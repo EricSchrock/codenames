@@ -20,7 +20,7 @@ https://gameprogrammingpatterns.com/game-loop.html
 
 See the links below for examples of game loops in C/C++ code. The first is a TUI. The second is a GUI with an FPS (frames per second) throttle.
 
-https://github.com/EricSchrock/projects-for-luke/blob/master/tic_tac_toe_tui.c
+https://github.com/EricSchrock/tic-tac-toe/blob/master/tic_tac_toe_tui.c
 
 https://github.com/EricSchrock/acquire (see the source code and the diagrams in the README)
 
