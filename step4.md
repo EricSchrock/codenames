@@ -11,7 +11,7 @@ This is our first step using C. Make sure your editor is setup correctly.
 
 We will start by porting your "update state" type functions. IO is messy so porting the functions without IO is a good place to start.
 
-    Objective: Write C versions of all your state update type function.
+    Objective: Write C versions of all your state update type functions.
 
 Python code can call C code. This allows us to port your project from Python to C in stages while keeping it fully functional for testing. This is conceptually simple but tricky in practice and this step will help you understand under the hood in both languages a bit more.
 
