@@ -31,25 +31,26 @@ Why VS Code? Because it is currently the most commonly used code editor. It also
 
 ### GitHub
 
-Why GitHub? A free GitHub account allows free private and public code repositories.
+Why GitHub? GitHub is the most common way for developers to collaborate and to share their work. Additionally, a free GitHub account allows private and public code repositories. More on this later.
 
-    Objective: Create a GitHub account
+- [ ] Create a GitHub account
+- [ ] Complete the "hello world" tutorial
+- [ ] Create a public GitHub repository called "codenames"
 
-https://github.com/
+> [!NOTE]
+> - https://github.com/
+> - https://docs.github.com/en/get-started/quickstart/hello-world
 
-Your GitHub account is a key part of your professional portfolio. I recommend you tie your username to your real name (e.g. mine is EricSchrock). This makes it easier for people to find you online and also makes it easier for people to type in your GitHub account link when looking off a paper copy of your resume (e.g. https://github.com/EricSchrock). If you already have a GitHub account, it is easy to change your username.
+> [!TIP]
+> Your GitHub account is a key part of your professional portfolio. I recommend you tie your username to your real name (e.g. mine is EricSchrock). This makes it easier for people to find you online and also makes it easier for people to type in your GitHub account link when looking off a paper copy of your resume (e.g. https://github.com/EricSchrock). If you already have a GitHub account, it is easy to change your username.
+>
+> https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-user-account-settings/changing-your-github-username
 
-https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-user-account-settings/changing-your-github-username
+> [!TIP]
+> The most common naming convention for repositories is all lowercase letters with dashes in place of spaces (e.g. `purdue-ece437` or `tic-tac-toe`).
 
-    Objective: Complete the "hello world" tutorial
-
-https://docs.github.com/en/get-started/quickstart/hello-world
-
-    Objective: Create a public GitHub repository called "codenames"
-
-The most common naming convention for repositories is all lowercase letters with dashes in place of spaces (e.g. `purdue-ece437` or `tic-tac-toe`).
-
-A good rule of thumb is to keep repositories tied to generic class assignments private so people can't cheat off you and to keep everything else public to build your professional portfolio. Class projects that are unique to you or your team can be kept public.
+> [!TIP]
+> A good rule of thumb is to keep repositories tied to generic class assignments private so people can't cheat off you and to keep everything else public to build your professional portfolio. Class projects that are unique to you or your team can be kept public.
 
 ### git
 
