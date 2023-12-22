@@ -1,6 +1,6 @@
 # Codenames
 
-This repository contains instructions I created to help a college student refactor one of their [class projects](https://github.com/LKieser/codenames) and port it from Python to C. A lot of the material was inspired by [write ups](https://github.com/EricSchrock/software-engineering-intro) I had previously created for structuring a software engineering mentorship.
+This repository contains instructions I created to help a college student refactor one of their [class projects](https://github.com/LKieser/codenames) (after the class finished) and port it from Python to C. A lot of the material was inspired by [write ups](https://github.com/EricSchrock/software-engineering-intro) I had previously created for structuring a software engineering mentorship.
 
 
 ### Steps
