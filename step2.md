@@ -23,7 +23,7 @@ Below are some examples of game loops in C/C++ code. The first is a TUI. The sec
 
 &nbsp;
 
-- [] Refactor your code into a clear game loop
+- [ ] Refactor your code into a clear game loop
 
 > [!IMPORTANT]
 > As always, create a new branch off `main` for your changes and once you have them working, submit a PR (pull request) into `main` and set me as a reviewer.
