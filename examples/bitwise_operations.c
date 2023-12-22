@@ -29,20 +29,17 @@ int main()
         return EXIT_FAILURE;
     }
 
-    if (error != NO_ERROR) {
-        printf("Error: %d\n", error);
-
-        switch (error) {
-        case POWER_BAD:
-            printf("Power bad\n");
-            break;
-        case LOST_CONNECTION:
-            printf("Lost connection\n");
-            break;
-        }
+    switch (error) {
+    case NO_ERROR:
+        printf("Lon: %d | Lat: %d\n", lon, lat);
+        break;
+    case POWER_BAD:
+        printf("Power bad\n");
+        break;
+    case LOST_CONNECTION:
+        printf("Lost connection\n");
+        break;
     }
-
-    printf("Lon: %d | Lat: %d\n", lon, lat);
 
     return EXIT_SUCCESS;
 }
