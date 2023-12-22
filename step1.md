@@ -8,7 +8,7 @@ Why Linux? Because everything required for C development is either preinstalled 
 
 Why WSL? Because it is the easiest way to develop in Linux on a Windows computer.
 
-[ ] Install WSL2 and Ubuntu
+- [ ] Install WSL2 and Ubuntu
 
 > [!NOTE]
 > https://learn.microsoft.com/en-us/windows/wsl/install
@@ -17,21 +17,15 @@ Why WSL? Because it is the easiest way to develop in Linux on a Windows computer
 
 Why VS Code? Because it is currently the most commonly used code editor. It also integrates with WSL.
 
-[ ] Install and setup VS Code
+- [ ] Install and setup VS Code
+- [ ] Install the Microsoft extensions for Python and C/C++ development
+- [ ] Connect VS Code to WSL
 
 > [!NOTE]
 > - https://code.visualstudio.com/
 > - https://code.visualstudio.com/learn/get-started/basics
-
-[ ] Install the Microsoft extensions for Python and C/C++ development
-
-> [!NOTE]
-> https://code.visualstudio.com/learn/get-started/extensions
-
-[ ] Connect VS Code to WSL
-
-> [!NOTE]
-> https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode
+> - https://code.visualstudio.com/learn/get-started/extensions
+> - https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode
 
 ## Setting up version control
 
