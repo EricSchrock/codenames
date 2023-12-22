@@ -8,30 +8,31 @@ Why Linux? Because everything required for C development is either preinstalled 
 
 Why WSL? Because it is the easiest way to develop in Linux on a Windows computer.
 
-    Objective: Install WSL2 and Ubuntu
+[ ] Install WSL2 and Ubuntu
 
-https://learn.microsoft.com/en-us/windows/wsl/install
+> [!NOTE]
+> https://learn.microsoft.com/en-us/windows/wsl/install
 
-&nbsp;
 ### Visual Studio Code (VS Code)
 
 Why VS Code? Because it is currently the most commonly used code editor. It also integrates with WSL.
 
-    Objective: Install and setup VS Code
+[ ] Install and setup VS Code
 
-https://code.visualstudio.com/
+> [!NOTE]
+> - https://code.visualstudio.com/
+> - https://code.visualstudio.com/learn/get-started/basics
 
-https://code.visualstudio.com/learn/get-started/basics
+[ ] Install the Microsoft extensions for Python and C/C++ development
 
-    Objective: Install the Microsoft extensions for Python and C/C++ development
+> [!NOTE]
+> https://code.visualstudio.com/learn/get-started/extensions
 
-https://code.visualstudio.com/learn/get-started/extensions
+[ ] Connect VS Code to WSL
 
-    Objective: Connect VS Code to WSL
+> [!NOTE]
+> https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode
 
-https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode
-
-&nbsp;
 ## Setting up version control
 
 ### GitHub
@@ -56,7 +57,6 @@ The most common naming convention for repositories is all lowercase letters with
 
 A good rule of thumb is to keep repositories tied to generic class assignments private so people can't cheat off you and to keep everything else public to build your professional portfolio. Class projects that are unique to you or your team can be kept public.
 
-&nbsp;
 ### git
 
 Why git? Because unfortunately, [mercurial](https://www.mercurial-scm.org/) is dead.
@@ -81,7 +81,6 @@ Enter `git clone git@github.com:<your username>/codenames.git` on the WSL comman
 
 Click `File` -> `Open Folder...` or press `Ctrl + K` follow by `Ctrl + O`.
 
-&nbsp;
 ## Saving your code baseline
 
     Objective: Create a branch called "baseline" and commit your Python Codenames project code
