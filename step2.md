@@ -16,14 +16,9 @@ Clear separation between the code from each of these three steps comes with a lo
 
 [This article](https://gameprogrammingpatterns.com/game-loop.html) explains game loops in detail. You do not have to worry about the time related portions yet for your Codenames TUI, as it probably currently pauses in the `process_input()` step to wait for user input and only updates and renders the state in response to new input. This may change once you transition to a GUI.
 
-Below are some examples of game loops in C/C++ code. The first is a TUI. The second is a GUI with an FPS (frames per second) throttle.
-
-- https://github.com/EricSchrock/tic-tac-toe/blob/master/tic_tac_toe_tui.c
-- https://github.com/EricSchrock/acquire (see the source code and the diagrams in the README)
-
-&nbsp;
-
-- [ ] Refactor your code into a clear game loop
+- [ ] Refactor your code into a clear game loop. Below are some examples of game loops in C/C++ code. The first is a TUI. The second is a GUI with an FPS (frames per second) throttle.
+  - https://github.com/EricSchrock/tic-tac-toe/blob/master/tic_tac_toe_tui.c
+  - https://github.com/EricSchrock/acquire (see the source code and the diagrams in the README)
 
 > [!IMPORTANT]
 > As always, create a new branch off `main` for your changes and once you have them working, submit a PR (pull request) into `main` and set me as a reviewer.
