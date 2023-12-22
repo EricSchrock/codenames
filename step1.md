@@ -9,37 +9,31 @@ Why Linux? Because everything required for C development is either preinstalled 
 Why WSL? Because it is the easiest way to develop in Linux on a Windows computer.
 
 - [ ] Install WSL2 and Ubuntu
-
-> [!NOTE]
-> https://learn.microsoft.com/en-us/windows/wsl/install
+  - https://learn.microsoft.com/en-us/windows/wsl/install
 
 ### Visual Studio Code (VS Code)
 
 Why VS Code? Because it is currently the most commonly used code editor. It also integrates with WSL.
 
 - [ ] Install and setup VS Code
+  - https://code.visualstudio.com/
+  - https://code.visualstudio.com/learn/get-started/basics
 - [ ] Install the Microsoft extensions for Python and C/C++ development
+  - https://code.visualstudio.com/learn/get-started/extensions
 - [ ] Connect VS Code to WSL
-
-> [!NOTE]
-> - https://code.visualstudio.com/
-> - https://code.visualstudio.com/learn/get-started/basics
-> - https://code.visualstudio.com/learn/get-started/extensions
-> - https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode
+  - https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode
 
 ## Setting up version control
 
 ### GitHub
 
-Why GitHub? GitHub is the most common way for developers to collaborate and to share their work. Additionally, a free GitHub account allows private and public code repositories. More on this later.
+Why GitHub? GitHub is the most common way for developers to collaborate and to share their work. Additionally, a free GitHub account allows private and public code repositories.
 
 - [ ] Create a GitHub account
+  - https://github.com/
 - [ ] Complete the "hello world" tutorial
+  - https://docs.github.com/en/get-started/quickstart/hello-world
 - [ ] Create a public GitHub repository called "codenames"
-
-> [!NOTE]
-> - https://github.com/
-> - https://docs.github.com/en/get-started/quickstart/hello-world
 
 > [!TIP]
 > Your GitHub account is a key part of your professional portfolio. I recommend you tie your username to your real name (e.g. mine is EricSchrock). This makes it easier for people to find you online and also makes it easier for people to type in your GitHub account link when looking off a paper copy of your resume (e.g. https://github.com/EricSchrock). If you already have a GitHub account, it is easy to change your username.
@@ -59,17 +53,15 @@ Why git? Because unfortunately, [mercurial](https://www.mercurial-scm.org/) is d
 Why version control? Version control saves a history of your code changes and enables smoother collaboration with tools for merging changes to the same files by multiple people.
 
 - [ ] Complete a git tutorial
+  - https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/ (one of many to choose from)
 - [ ] Setup an authenticated connection between WSL and GitHub. ***This part can be pretty tricky. Don't be afraid to ask for help!***
+  - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux
 - [ ] Clone your "codenames" GitHub repository by entering `git clone git@github.com:<your username>/codenames.git` on the WSL command line.
 - [ ] Open the cloned repository in VS Code by either clicking `File` -> `Open Folder...` or by pressing `Ctrl + K` follow by `Ctrl + O`.
 
-> [!NOTE]
-> - https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/ (one of many to choose from)
-> - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux
-
 ## Saving your code baseline
 
-- [ ] Create a branch called "baseline" and commit your Python code from your Codenames class project. ***Git commands can be tricky. Reach out if you need any help!***
+- [ ] Create a branch called "baseline" and commit the Python code from your Codenames class project. ***Git commands can be tricky. Reach out if you need any help!***
   1. From your WSL terminal, in your `codenames` git repository clone, run `git checkout -b baseline`.
   2. Put your Python Codenames project code inside your `codenames` repository.
   3. Commit your code by running `git add *` followed by `git commit -m "Baseline Python code"`.
