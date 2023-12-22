@@ -20,7 +20,7 @@ Below are some examples of game loops in C/C++ code. The first is a TUI. The sec
 
 - https://github.com/EricSchrock/tic-tac-toe/blob/master/tic_tac_toe_tui.c
 - https://github.com/EricSchrock/acquire (see the source code and the diagrams in the README)
-
+&nbsp;
 - [] Refactor your code into a clear game loop
 
 > [!IMPORTANT]
