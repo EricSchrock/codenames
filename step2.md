@@ -18,7 +18,7 @@ Clear separation between the code from each of these three steps comes with a lo
 
 - [ ] Refactor your code into a clear game loop. Below are some examples of game loops in C/C++ code. The first is a TUI. The second is a GUI with an FPS (frames per second) throttle.
   - https://github.com/EricSchrock/tic-tac-toe/blob/master/tic_tac_toe_tui.c
-  - https://github.com/EricSchrock/acquire (see the source code and the diagrams in the README)
+  - https://github.com/EricSchrock/acquire (see the `Game::Run()` function in `src/Game.cpp` and the diagrams in the README)
 
 > [!IMPORTANT]
 > As always, create a new branch off `main` for your changes and once you have them working, submit a PR (pull request) into `main` and set me as a reviewer.
