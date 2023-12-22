@@ -6,16 +6,12 @@ Creating tests that can be rerun easily allow you to confidently make changes wh
 
 Writing automated tests for I/O can be tricky, so for this step our goal is to write unit tests for your "state update" code. If you've properly defined your game loop, you should be able to do this without touching your "process input" or "render" code.
 
-The article linked below lays out some unit testing best practices. Over time, you'll develop an intuition for the right level of testing for each context, but this should give you a foundation to start from. Don't worry too much about the more complicated techniques the article discusses like mocking or dependency injection.
+[This article](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices) lays out some unit testing best practices. Over time, you'll develop an intuition for the right level of testing for each context, but this should give you a foundation to start from. Don't worry too much yet about the more complicated techniques the article discusses like mocking or dependency injection.
 
-https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices
+- [ ] Learn how to use `pytest` (a test framework for Python)
+  - https://docs.pytest.org/en/7.1.x/getting-started.html
+- [ ] Write tests for the functions tied to your state update code. Below are some example tests from one of my personal projects.
+  - https://github.com/EricSchrock/zurg/blob/main/tests/zurg_test.py
 
-`pytest` is an easy way to add tests to Python projects. See the links below for a setup tutorial and some example tests from one of my personal projects.
-
-https://docs.pytest.org/en/7.1.x/getting-started.html
-
-https://github.com/EricSchrock/zurg (see `tests/zurg_test.py`)
-
-    Objective: Write tests for the functions tied to your state update code
-
-As always, create a new branch off `main` for your changes and once you have them working, submit a PR (pull request) into `main` and set me as a reviewer.
+> [!IMPORTANT]
+> As always, create a new branch off `main` for your changes and once you have them working, submit a PR (pull request) into `main` and set me as a reviewer.
