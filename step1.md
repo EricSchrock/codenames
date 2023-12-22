@@ -54,7 +54,7 @@ Why version control? Version control saves a history of your code changes and en
 
 - [ ] Complete a git tutorial
   - https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/ (one of many to choose from)
-- [ ] Setup an authenticated connection between WSL and GitHub. ***This part can be pretty tricky. Don't be afraid to ask for help!***
+- [ ] Setup an authenticated connection between WSL and GitHub. ***This part can be tricky. Don't be afraid to ask for help!***
   - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux
 - [ ] Clone your "codenames" GitHub repository by entering `git clone git@github.com:<your username>/codenames.git` on the WSL command line.
 - [ ] Open the cloned repository in VS Code by either clicking `File` -> `Open Folder...` or by pressing `Ctrl + K` follow by `Ctrl + O`.
