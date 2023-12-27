@@ -6,7 +6,6 @@ This is our first step using C. Make sure your editor is setup correctly.
 
 - [ ] If you haven't already, install the official C/C++ extension for VS Code from Microsoft
 
-&nbsp;
 ## Calling C code from Python
 
 We will start by porting your "update state" type functions. IO is messy so porting the functions without IO is a good place to start.

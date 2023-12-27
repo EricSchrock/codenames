@@ -1,0 +1,9 @@
+flowchart TD
+    loop[Game loop]
+    loop -->|Calls| input[Process input]
+    loop -->|Calls| state[Update state]
+    loop -->|Calls| render[Render]
+    state -->|Calls| c[C code]
+
+    pytest[Python test code] -.->|Tests| state
+    ctest[C test code] -.->|Tests| c
