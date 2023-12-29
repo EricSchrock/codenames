@@ -1,4 +1,7 @@
-WORK IN PROGRESS
+# Step 6
+
+> [!WARNING]
+> Not complete
 
 1. Port state data structures to C (need different data structures?)
 2. Port rendering code to C (use hard coded states for testing display)

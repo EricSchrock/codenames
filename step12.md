@@ -1,4 +1,7 @@
-WORK IN PROGRESS
+# Step 12
+
+> [!WARNING]
+> Not complete
 
 1. GitHub
   - Pinned repositories
